@@ -1,5 +1,5 @@
-# Falcon Dynamics F1 core software
-Flight control software for a RP2040 MCU running FreeRTOS
+# rp2040 freertos template
+
 
 # Building
 * Install RP2040 ARM toolkit and Pico SDK, set PICO_SDK_PATH in root CMakeLists.txt
