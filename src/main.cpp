@@ -83,6 +83,7 @@ void neopixel_task(void *pvParameters) {
                 pixels.show();
                 vTaskDelay(pdMS_TO_TICKS(s));
             }
+
             for (int i = 250; i >= 150; i--) {
                 int value = pow(2, i / 32.0);
                 pixels.setBrightness(value);
@@ -112,7 +113,7 @@ void vSetStatusTask(void *pvParameters) {
         if(status == 3){
             status = 1;
         }else{
-            status = 1;
+            status = 3;
         }
 
         vTaskDelay(pdMS_TO_TICKS(15000));
