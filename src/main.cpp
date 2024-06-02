@@ -50,7 +50,7 @@ void neopixel_task(void *pvParameters) {
 
         if(receivedStatus == 1){
             r = 255;
-            g = 0;
+            g = 136;
             b = 0;
 
             s = 2;
@@ -69,7 +69,7 @@ void neopixel_task(void *pvParameters) {
             g = 0;
             b = 255;
 
-            s = 10;
+            s = 25;
             n = 1;
             on = true;
         }
@@ -97,9 +97,7 @@ void neopixel_task(void *pvParameters) {
             pixels.show();
         }
 
-        printf("test1\n");
-        vTaskDelay(pdMS_TO_TICKS(1500));
-        printf("test2\n");
+        vTaskDelay(pdMS_TO_TICKS(1000));
     }
 }
 
@@ -116,7 +114,7 @@ void vSetStatusTask(void *pvParameters) {
             status = 3;
         }
 
-        vTaskDelay(pdMS_TO_TICKS(15000));
+        vTaskDelay(pdMS_TO_TICKS(30000));
     }
 }
 
